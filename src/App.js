@@ -27,15 +27,21 @@ const Header = (params) => {
 const Content = (params) => {
   return (
     <>
-    <p>{params.part1} {params.exercises1}</p>
-    <p>{params.part2} {params.exercises2}</p>
-    <p>{params.part3} {params.exercises3}</p>
-  </>
+      <Part part={params.part1} exercise={params.exercises1}/>
+      <Part part={params.part2} exercise={params.exercises2}/>
+      <Part part={params.part3} exercise={params.exercises3}/>
+    </>
   )
 }
 
 const Total = (params) => {
   return (
     <p>Number of exercises {params.exercises1 + params.exercises2 + params.exercises3}</p>
+  )
+}
+
+const Part = (params) => {
+  return (
+    <p>{params.part} {params.exercise}</p>
   )
 }
